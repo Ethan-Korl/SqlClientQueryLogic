@@ -1,11 +1,11 @@
 from typing import Union
-from .types import (
+from interact.types import (
     PostgresQueryType,
     MysqlQueryType,
     SqlQueryType
     )
 from fastapi import FastAPI
-from .handlers import (
+from interact.handlers import (
     postgres_query,
     mysql_query,
     sqlserver_query
