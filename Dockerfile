@@ -14,5 +14,5 @@ RUN pip install -r requirements.txt
 
 EXPOSE 9000
 
-CMD [ "fastapi", "dev", "src/interact/main.py" ]
+CMD [ "fastapi", "dev", "src/http_client/main.py" ]
 
