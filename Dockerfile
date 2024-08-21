@@ -12,7 +12,7 @@ RUN pip install --upgrade pip
 
 RUN pip install -r requirements.txt
 
-EXPOSE 9000
+EXPOSE 8000
 
 CMD [ "fastapi", "dev", "src/http_client/main.py" ]
 
