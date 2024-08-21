@@ -2,6 +2,9 @@ from typing import Any
 import psycopg2
 from exceptions import PostgresQueryException
 
+# class HandleQueryIt:
+
+
 class HandlePostgres:
     def __init__(self, conn_string: str, query: str) -> None:
         self.conn_string = conn_string
@@ -14,16 +17,14 @@ class HandlePostgres:
             return None
         except Exception as ex:
             print(ex)
-            return exec
+            return ex
 
     def query_of_fetch(self) -> list[tuple[Any, ...]] | None:
         try:
             # Open a cursor to perform database operations
             cur = self.conn.cursor()
-
             # Execute a query
             cur.execute(self.query)
-
             # Retrieve query results
             records = cur.fetchall()
             return records
